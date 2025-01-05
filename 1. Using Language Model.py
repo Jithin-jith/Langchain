@@ -1,10 +1,11 @@
 import os
 from dotenv import load_dotenv
 from langchain_groq import ChatGroq
+from langchain_core.messages import HumanMessage, SystemMessage
 load_dotenv()
 model = ChatGroq(model="llama3-8b-8192")
 
-from langchain_core.messages import HumanMessage, SystemMessage
+
 
 messages = [
     SystemMessage(content="You are a Sarcastic ai assistant."),
