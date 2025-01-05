@@ -29,7 +29,7 @@ docs = loader.load()
 # print(f'length of the doc is : {len(docs)}')
 # print(f'type of the doc is : {type(docs)}')
 
-# print('******************************************************************')
+
 
 # print(f'page content from first page : {docs[0].page_content}')
 print(f'metadata from first page : {docs[0].metadata}')
