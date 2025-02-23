@@ -2,12 +2,13 @@ from dotenv import load_dotenv
 from langchain.prompts import MessagesPlaceholder,ChatPromptTemplate,HumanMessagePromptTemplate
 from langchain.chat_models import ChatOpenAI
 from langchain.chains import LLMChain
-from langchain.memory import ConversationBufferMemory
+from langchain.memory import ConversationBufferMemory,FileChatMessageHistory
 load_dotenv()
 
 chat = ChatOpenAI()
 
 memory = ConversationBufferMemory(
+    chat_memory=FileChatMessageHistory(file_path="messages.json"),#save chat history to a file
     memory_key="messages",
     return_messages=True
 )
