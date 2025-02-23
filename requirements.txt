@@ -3,3 +3,5 @@ langchain-groq
 langchain-community 
 pypdf
 youtube-transcript-api
+langchain-openai
+chromadb
