@@ -1,4 +1,4 @@
-from langchain_groq import ChatGroq
+import io
 from langchain_openai import ChatOpenAI
 from langchain.prompts import ChatPromptTemplate
 from langchain_community.document_loaders import YoutubeLoader
@@ -7,7 +7,6 @@ from dotenv import load_dotenv
 load_dotenv()
 model = ChatOpenAI()
 
-import io
 url = "https://www.youtube.com/watch?v=6fM70wVT0zg"
 loader = YoutubeLoader.from_youtube_url(url)
 docs = loader.load()
